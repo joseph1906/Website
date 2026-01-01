@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+.Main {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.Head {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #fff;
+}
+.Title {
+  margin-left: 20px;
+  display: flex;
+  height: 60px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+}
+
+.Title h1{
+  color: #000;
+  margin: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+}
+
+.link li{
+  list-style: none;
+  margin-top: 10px;
+  font-size: 25px;
+  color: #000;
+  margin-left: 40px;
+}
+
+li a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.BlockOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/church.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 20px;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.Context{
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+.Context .Text{
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex; 
+  flex-direction: column;
+  line-height: 30px;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Context .Pictures{
+  width: 50%;
+  height: 400px;
+}
+
+.Context img{
+  width: 100%;
+  height: 400px;
+}
+
+.Pastor{
+  display: flex;
+  width: 100%;
+  height: 400px;
+  padding: 2.5%;
+}
+
+.Pastor .FirstPastor{
+  width: 100%;
+  height: 50%;
+  margin: 1.5%;
+}
+
+.FirstPastor img{
+  width: 100%;
+  height: 300px;
+}
+
+.Pastor .SecondPastor{
+  width: 100%;
+  height: 400px;
+  margin: 1.5%;
+}
+
+.SecondPastor img{
+  width: 100%;
+  height: 300px;
+}
+.Pastor .ThirdPastor{
+  width: 100%;
+  height: 400px;
+  margin: 1.5%;
+}
+
+.ThirdPastor img{
+  width: 100%;
+  height: 300px;
+}
+
+.Footer{
+  display: flex;
+  width: 100%;
+  height: 240px;
+  margin-top: 40px;
+}
+
+.Footer .Introduction{
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.Introduction h2{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.Introduction p{
+  color: #fff;
+  margin-top: 20px;
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+  font-size: 20px;
+}
+
+.Form {
+  display: inline-block;
+  margin-top: 20px;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Form input{
+  width: 80%;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.Form button{
+  width: 80%;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+.Form button:hover{
+  background-color: #fff;
+}
