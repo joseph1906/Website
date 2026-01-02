@@ -5,8 +5,30 @@ import Pastor from './assets/Papa.png'
 import Church from './assets/FirstChurch.jpg'
 import SecondPastor from './assets/SecondPastor.png'
 import Shephered from './assets/Shephered.png'
+import ChurchOne from './assets/ChurchOne.jpg'
+import ChurchTow from './assets/ChurchTwo.jpg'
+import ChurchThree from './assets/ChurchThree.jpg'
+import { useEffect, useState } from 'react'
 
 function App() {
+  const images = [Church, ChurchOne, ChurchTow, ChurchThree];
+  const [currentIndex, setCurrentIndex] = useState(0); // Fixed: Added initial value 0
+
+  useEffect(() => {
+    let isMounted = true;
+    
+    const interval = setInterval(() => {
+      if (isMounted) {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }
+    }, 3000);
+    
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
+  }, [images.length]); 
+
   return (
     <Router>
       <div className="Main">
@@ -53,8 +75,21 @@ foundation of our faith and teaching.
  of Christ, called to share the Gospel, 
  care for one another, and bring hope to the world.</p>
                 </div>
+                
+                {/* UPDATED Picture Section with Slideshow */}
                 <div className="Picture">
-                  <img src={Church} alt="" />
+                  <div className="slideshow-container">
+                    <div 
+                      className="slideshow-track"
+                      style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                      {images.map((image, index) => (
+                        <div key={index} className="slide">
+                          <img src={image} alt={`Church view ${index + 1}`} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="Pastor">
