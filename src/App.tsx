@@ -1,34 +1,11 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import ChurchImage from './assets/church.jpg'
-import Pastor from './assets/Papa.png'
-import Church from './assets/FirstChurch.jpg'
-import SecondPastor from './assets/SecondPastor.png'
-import Shephered from './assets/Shephered.png'
-import ChurchOne from './assets/ChurchOne.jpg'
-import ChurchTow from './assets/ChurchTwo.jpg'
-import ChurchThree from './assets/ChurchThree.jpg'
-import { useEffect, useState } from 'react'
+import Pastor from './assets/Trio.jpg'
+import SecondPastor from './assets/TrioTwo.jpg'
+import Shephered from './assets/TrioThree.jpg'
 
 function App() {
-  const images = [Church, ChurchOne, ChurchTow, ChurchThree];
-  const [currentIndex, setCurrentIndex] = useState(0); // Fixed: Added initial value 0
-
-  useEffect(() => {
-    let isMounted = true;
-    
-    const interval = setInterval(() => {
-      if (isMounted) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }
-    }, 3000);
-    
-    return () => {
-      isMounted = false;
-      clearInterval(interval);
-    };
-  }, [images.length]); 
-
   return (
     <Router>
       <div className="Main">
@@ -53,7 +30,6 @@ function App() {
                 <p>— Psalm 37:4 (KJV)</p>
               </div>
               <div className="Context">
-                <div className="Text">
                   <h2>About Us</h2>
                   <p>We believe in one God, 
                     the Creator of heaven and earth,
@@ -74,41 +50,60 @@ foundation of our faith and teaching.
  We believe that the Church is the body 
  of Christ, called to share the Gospel, 
  care for one another, and bring hope to the world.</p>
+ 
                 </div>
-                
-                {/* UPDATED Picture Section with Slideshow */}
-                <div className="Picture">
-                  <div className="slideshow-container">
-                    <div 
-                      className="slideshow-track"
-                      style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                    >
-                      {images.map((image, index) => (
-                        <div key={index} className="slide">
-                          <img src={image} alt={`Church view ${index + 1}`} />
-                        </div>
-                      ))}
-                    </div>
+                <div className="Mission">
+                  <div className="Firstmission">
+                    <h2>Our Mission</h2>
+                    <p>To establish new churches in
+                     certain strategic cities of 
+                     the country to serve as a 
+                     base for the mission. To 
+                     build up our members with 
+                     the goal of multiplying 
+                     servants who are capable 
+                     of going to the peoples most
+                      in need of the Gospel for 
+                      the establishment of new churches.</p>
+                  </div>
+                  <div className="SecondVision">
+                    <h2>Our Vision</h2>
+                  <p> Bâtir une église forte pour la mission. (Actes1.8) <br /> 
+                   Une Eglise qui prie.<br />
+                   Des cellules des maisons dynamiques et efficaces.<br /> 
+                   Evangélisation Individuelle mode de vie<br />
+                  Formation pour le Ministère </p> 
+                  </div>
+                  <div className="Third">
+                    <h2>The Salvation of Souls</h2>
+                   <p> The salvation of souls, their 
+                    edification and training as 
+                    disciples of Jesus Christ, 
+                    in order to provide the nation 
+                    and the world with a generation 
+                    of men and women of integrity, 
+                    faithful, God-fearing, and 
+                    actively involved in fulfilling 
+                    the missionary mandate of Jesus
+                     Christ in our generation.</p>
                   </div>
                 </div>
-              </div>
               <div className="Pastor">
                 <div className="FirstPastor">
                   <img src={Pastor} alt=""/>
-                    <h1>Amos TALILUVA</h1>
-                    <p>Lead Pastor</p>
                 </div>
-                <div className="SecondPastor">
-                  <img src={SecondPastor} alt="" />
-                  <h1>Papa Patrick</h1>
-                  <p>Assistant Pastor</p>
+                <div className="Text">
+                  <h2>Pasteur Amos TALILUVA (Lead Pastor) </h2>
+                  <p>Le Pasteur Amos TALILUVA est le Pasteur
+                     titulaire du Effective Life Church /Kampala marié au Pasteur Furaha. 
+                     Le Pasteur Amos a reçu le mandant d’être une lumière des nations 
+                     et porteur du salut  de Dieu jusqu’aux Extrémités de la terre.</p><br />
+                     <p>"Allez, faites de toutes les nations des disciples, les baptisant
+                       au nom du Père, du Fils et du Saint Esprit, et enseignez-leur 
+                       à observer tout ce que je vous ai prescrit. Et voici, je suis 
+                       avec vous tous les jours, jusqu’à la fin du monde."</p>
                 </div>
-                <div className="ThirdPastor">
-                  <img src={Shephered} alt="" />
-                  <h1>Elijah</h1>
-                  <p>Shepherd</p>
                 </div>
-              </div>
               <div className="Footer">
                 <div className="Introduction">
                   <h2>Effective Life Church</h2>

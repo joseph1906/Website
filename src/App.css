@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #000;
+  background: #fff;
 }
 
 .Main {
@@ -18,7 +18,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  background: #fff;
+  background: #d9d9d9;
 }
 .Title {
   margin-left: 20px;
@@ -63,7 +63,7 @@ li a{
   background: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('/church.jpg') no-repeat center center/cover;
-  color: white;
+  color: #000;
   padding: 20px;
   height: 400px;
   width: 100%;
@@ -71,70 +71,133 @@ li a{
 }
 
 .Context{
-  display: flex;
   width: 100%;
-  height: 400px;
+  height: auto;
 }
 
-.Context .Text{
-  width: 50%;
+.Context {
+  width: 100%;
+  padding: 40px;
+  font-size: 20px;
+  text-justify: center;
   height: 100%;
-  color: #fff;
+  color: #000;
+  text-align: justify;
   align-items: center;
   justify-content: center;
   display: flex; 
   flex-direction: column;
   line-height: 30px;
-  margin: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.Context .Pictures{
-  width: 50%;
-  height: 400px;
+.Context h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.Context img{
+.Mission{
+  color: #111;
+  display: flex;
   width: 100%;
-  height: 400px;
+  height: 300px;
+}
+
+.Mission .Firstmission{
+  width: 90%;
+  height: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.Firstmission h2{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.Firstmission p{
+  font-size: 20px;
+  color: #111;
+  text-align: justify;
+}
+
+.Mission .SecondVision{
+  width: 100%;
+  height: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+
+.SecondVision h2{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.SecondVision P{
+  font-size: 20px;
+  color: #111;
+  text-align: justify;
+}
+
+.Mission .Third{
+  width: 100%;
+  height: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.Mission h2{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.Mission p{
+  font-size: 20px;
+  color: #111;
+  text-align: justify;
 }
 
 .Pastor{
   display: flex;
   width: 100%;
   height: 400px;
-  padding: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .Pastor .FirstPastor{
   width: 100%;
-  height: 50%;
-  margin: 1.5%;
+  height: 100%;
+  margin: 10px;
+  color: #000;
 }
 
 .FirstPastor img{
   width: 100%;
-  height: 300px;
-}
-
-.Pastor .SecondPastor{
-  width: 100%;
   height: 400px;
-  margin: 1.5%;
 }
 
-.SecondPastor img{
+.FirstPastor .Text{
   width: 100%;
-  height: 300px;
-}
-.Pastor .ThirdPastor{
-  width: 100%;
-  height: 400px;
-  margin: 1.5%;
+  height: 100%;
+  padding: 5%;
 }
 
-.ThirdPastor img{
-  width: 100%;
-  height: 300px;
+.Text h2{
+  color: #000;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.Text p{
+  color: #000;
+  font-size: 20px;
+  margin: 20px;
+  font-style: italic;
 }
 
 .Footer{
@@ -201,10 +264,10 @@ li a{
 .Form button:hover{
   background-color: #fff;
 }
-/* Slideshow Styles for Picture Section */
+
 .Picture {
   width: 100%;
-  max-width: 600px; /* Adjust based on your layout */
+  max-width: 600px;
   margin: 0 auto;
   padding: 10px;
 }
