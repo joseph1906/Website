@@ -2,9 +2,10 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import ChurchImage from './assets/church.jpg'
 import Pastor from './assets/Trio.jpg'
-import SecondPastor from './assets/TrioTwo.jpg'
-import Shephered from './assets/TrioThree.jpg'
-
+import ChurchOne from './assets/ChurchOne.jpg'
+import ChurchTwo from './assets/ChurchTwo.jpg'
+import ChurchThree from './assets/ChurchThree.jpg'
+import Location from './assets/Location.png'
 function App() {
   return (
     <Router>
@@ -88,6 +89,16 @@ foundation of our faith and teaching.
                      Christ in our generation.</p>
                   </div>
                 </div>
+                <div className="Pictures">
+                  <div className="POne"><hr /></div>
+                  
+                  <div className="images">
+                  <img src={ChurchOne} alt="" />
+                  <img src={ChurchTwo} alt="" />
+                  <img src={ChurchThree} alt="" />
+                  </div>
+                </div>
+
               <div className="Pastor">
                 <div className="FirstPastor">
                   <img src={Pastor} alt=""/>
@@ -105,19 +116,21 @@ foundation of our faith and teaching.
                 </div>
                 </div>
               <div className="Footer">
-                <div className="Introduction">
+                <div className="TextF">
                   <h2>Effective Life Church</h2>
-                  <p>+243 977 853 370</p>
-                  <p>info@mywebsite.com</p>
-                  <p>Kampala, Uganda Konge Mosk Lukuli Road</p>
+                  <p>Le Centre Evangélique Francophone
+                     Arche de l’Alliance Goma est une 
+                     Extension du C.E. Arche de l’Alliance 
+                     Kinshasa/ Masina. Elle a pris 
+                     naissance à Goma le 04/07/1999 dans 
+                     le but de répondre à l’appel 
+                     missionnaire de Jésus Christ de 
+                     faire de toutes les nations ses disciples. (Matt 28,19-20).</p>
                 </div>
-                <div className="Form">
-                <input type="text" placeholder="Firstname" /><br />
-                <input type="text" placeholder="Lastname" /><br />
-                <input type="text" placeholder="Email" /><br />
-                <button>Submit</button>
+                <div className="Image">
+                  <img src={Location} alt="" />
                 </div>
-</div>
+              </div>
             </div>
           } />
           <Route path="/event" element={

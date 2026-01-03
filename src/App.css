@@ -5,56 +5,145 @@
 }
 
 body {
-  background: #fff;
+  background: #d9d9d9;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Main {
   color: #fff;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .Head {
   width: 100%;
-  height: 100%;
   display: flex;
-  background: #d9d9d9;
+  background: #fff;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
 .Title {
-  margin-left: 20px;
-  display: flex;
-  height: 60px;
-  margin-right: 150px;
-  margin-bottom: 20px;
-}
-
-.Title h1{
-  color: #000;
-  margin: 20px;
-  font-weight: bold;
-  font-style: italic;
-}
-
-.link{
   display: flex;
   align-items: center;
+  height: 60px;
 }
 
-.link li{
-  list-style: none;
-  margin-top: 10px;
-  font-size: 25px;
+.Title h1 {
   color: #000;
-  margin-left: 40px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.8rem;
+  white-space: nowrap;
 }
 
-li a{
+.link {
+  display: flex;
+  justify-content: center; 
+  flex: 1; 
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.link ul {
+  display: flex;
+  gap: 30px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link li {
+  margin: 0;
+}
+
+.link li a {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-style: oblique;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
+.link li a:hover {
+  color: #4a6cf7;
+  background-color: rgba(74, 108, 247, 0.1);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .Head {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .Title {
+    margin-bottom: 15px;
+    height: auto;
+  }
+  
+  .Title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .link {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .link ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .link li a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Title h1 {
+    font-size: 1.3rem;
+  }
+  
+  .link ul {
+    gap: 10px;
+  }
+  
+  .link li a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .link ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .link li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .link li a {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .BlockOne {
   display: flex;
   flex-direction: column;
@@ -62,266 +151,336 @@ li a{
   align-items: center;
   background: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('/church.jpg') no-repeat center center/cover;
-  color: #000;
+    url('./assets/church.jpg') no-repeat center center/cover;
+  color: white;
   padding: 20px;
   height: 400px;
   width: 100%;
   text-align: center;
 }
 
-.Context{
-  width: 100%;
-  height: auto;
+.BlockOne h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.BlockOne p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  max-width: 800px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .Context {
   width: 100%;
-  padding: 40px;
-  font-size: 20px;
-  text-justify: center;
-  height: 100%;
+  padding: 40px 20px;
+  font-size: 1.1rem;
   color: #000;
   text-align: justify;
-  align-items: center;
-  justify-content: center;
-  display: flex; 
-  flex-direction: column;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.Context h2{
-  margin-top: 20px;
+
+.Context h2 {
   margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.Mission{
+.Mission {
   color: #111;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 300px;
+  padding: 40px 20px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.Mission .Firstmission{
-  width: 90%;
-  height: 100%;
-  margin-right: 5%;
-  margin-left: 5%;
+.Firstmission, .SecondVision, .Third {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.Firstmission h2{
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #111;
+.Mission h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #4a6cf7;
+  padding-bottom: 10px;
 }
 
-.Firstmission p{
-  font-size: 20px;
-  color: #111;
-  text-align: justify;
+.Mission p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-.Mission .SecondVision{
+.Pictures {
   width: 100%;
-  height: 100%;
-  margin-right: 5%;
-  margin-left: 5%;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-.SecondVision h2{
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.SecondVision P{
-  font-size: 20px;
-  color: #111;
-  text-align: justify;
-}
-
-.Mission .Third{
+.Pictures hr {
   width: 100%;
-  height: 100%;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
 }
 
-.Mission h2{
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.Mission p{
-  font-size: 20px;
-  color: #111;
-  text-align: justify;
-}
-
-.Pastor{
+.images {
   display: flex;
-  width: 100%;
-  height: 400px;
-  padding-left: 5%;
-  padding-right: 5%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.Pastor .FirstPastor{
-  width: 100%;
-  height: 100%;
-  margin: 10px;
-  color: #000;
+.images img {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.FirstPastor img{
-  width: 100%;
-  height: 400px;
-}
-
-.FirstPastor .Text{
-  width: 100%;
-  height: 100%;
-  padding: 5%;
-}
-
-.Text h2{
-  color: #000;
-  font-size: 25px;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-.Text p{
-  color: #000;
-  font-size: 20px;
-  margin: 20px;
-  font-style: italic;
-}
-
-.Footer{
+.Pastor {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40px 20px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.FirstPastor {
+  flex: 1;
+  min-width: 300px;
+}
+
+.FirstPastor img {
   width: 100%;
   height: auto;
-  margin-top: 40px;
-  background: #4C1D95;
-}
-
-.Footer .Introduction{
-  width: 50%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.Introduction h2{
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.Introduction p{
-  color: #fff;
-  margin-top: 20px;
-  justify-content: left;
-  display: flex;
-  flex-direction: column;
-  margin-left: 200px;
-  font-size: 20px;
-}
-
-.Form {
-  display: inline-block;
-  margin-top: 20px;
-  width: 50%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.Form input{
-  width: 80%;
-  height: 40px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-.Form button{
-  width: 80%;
-  height: 40px;
-  margin: 5px;
-  border-radius: 5px;
-  background-color: orange;
-}
-
-.Form button:hover{
-  background-color: #fff;
-}
-
-.Picture {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 400px; 
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.slideshow-track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
+  max-height: 400px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.slideshow-container:hover .slideshow-track {
-  transition-duration: 1s;
+.Text {
+  flex: 2;
+  min-width: 300px;
 }
 
-.dots-container {
+.Text h2 {
+  color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4a6cf7;
+}
+
+.Text p {
+  color: #000;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.Footer {
+  display: flex;
+  flex-wrap: wrap;
+  background: #101010;
+  padding: 20px 20px;
+  gap: 30px;
+  color: white;
+}
+
+.TextF {
+  flex: 1;
+  min-width: 300px;
+}
+
+.TextF h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.TextF p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.Image {
+  flex: 1;
+  min-width: 300px;
   display: flex;
   justify-content: center;
-  margin-top: 15px;
-  gap: 10px;
+  align-items: center;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border: none;
-  padding: 0;
+.Image img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 10px;
 }
 
-.dot.active {
-  background-color: #2c3e50;
+
+@media (max-width: 768px) {
+  .Head {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .Title {
+    margin: 0 0 20px 0;
+  }
+  
+  .link {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .BlockOne h1 {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+  
+  .BlockOne p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .Context {
+    padding: 30px 15px;
+    font-size: 1rem;
+  }
+  
+  .Mission {
+    padding: 30px 15px;
+  }
+  
+  .Pastor {
+    padding: 30px 15px;
+  }
+  
+  .images img {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Title h1 {
+    font-size: 1.3rem;
+  }
+  
+  .link {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .link li a {
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+    background: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .BlockOne {
+    height: 300px;
+    padding: 15px;
+  }
+  
+  .BlockOne h1 {
+    font-size: 1.8rem;
+  }
+  
+  .BlockOne p {
+    font-size: 0.9rem;
+  }
+  
+  .Context h2,
+  .Mission h2,
+  .Text h2,
+  .TextF h2 {
+    font-size: 1.5rem;
+  }
+  
+  .Context p,
+  .Mission p,
+  .Text p,
+  .TextF p {
+    font-size: 1rem;
+  }
+  
+  .Firstmission,
+  .SecondVision,
+  .Third,
+  .TextF,
+  .Image {
+    min-width: 100%;
+  }
+  
+  .Footer {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .BlockOne h1 {
+    font-size: 1.5rem;
+  }
+  
+  .images img {
+    height: 200px;
+  }
+  
+  .FirstPastor img {
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Context,
+  .Mission,
+  .Pictures,
+  .Pastor {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .Footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .images img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+  
+  .link li a:hover {
+    color: #4a6cf7;
+    transform: translateY(-2px);
+  }
 }
