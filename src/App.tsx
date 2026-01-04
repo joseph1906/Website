@@ -297,7 +297,7 @@ foundation of our faith and teaching.
                         their spiritual walk, and 
                         serve both the church and 
                         the community with purpose. <br />
-                        <em>English Services from 09:00 AM to 10:30 AM</em>
+                        <em>English Services from 09:00 AM to 10:30 AM</em><br />
                         <em>French Service from 10:30 AM to 12:30 PM</em></p>
                   </div>
                 </div>
