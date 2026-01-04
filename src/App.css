@@ -484,3 +484,490 @@ body {
     transform: translateY(-2px);
   }
 }
+
+.FirstProgram{
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #000;
+}
+
+.KidProgram{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-radius: 5px;
+}
+
+.KidProgram h2{
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.KidProgram img{
+  width: 95%;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.KidProgram p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: justify;
+}
+
+.SecondProgram{
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #000;
+}
+
+.Contact{
+  background: #d9d9d9;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+/* Add these styles to your existing App.css file */
+
+/* ===== MINISTRIES PAGE RESPONSIVENESS ===== */
+.FirstProgram, .SecondProgram {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40px 20px;
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.KidProgram {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.KidProgram:hover {
+  transform: translateY(-5px);
+}
+
+.KidProgram h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #4a6cf7;
+  padding-bottom: 10px;
+}
+
+.KidProgram hr {
+  width: 50%;
+  margin: 10px auto 20px auto;
+  border: none;
+  height: 2px;
+  background: #4a6cf7;
+}
+
+.KidProgram img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.KidProgram p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  color: #555;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.KidProgram em {
+  display: block;
+  font-style: italic;
+  color: #4a6cf7;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ===== CONTACT PAGE ===== */
+.Contact {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f5f5f5;
+  text-align: center;
+  color: #000;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== IMPROVED EXISTING RESPONSIVENESS ===== */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .Head {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .Title h1 {
+    font-size: 1.6rem;
+  }
+  
+  .link ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .BlockOne {
+    height: 300px;
+    padding: 30px 15px;
+  }
+  
+  .BlockOne h1 {
+    font-size: 1.8rem;
+  }
+  
+  .BlockOne p {
+    font-size: 1rem;
+  }
+  
+  .Context {
+    padding: 30px 15px;
+    font-size: 1rem;
+  }
+  
+  .Mission {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  
+  .Firstmission, .SecondVision, .Third {
+    min-width: 100%;
+  }
+  
+  .Pictures {
+    padding: 30px 15px;
+  }
+  
+  .images {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .images img {
+    min-width: 100%;
+    max-width: 500px;
+    height: 200px;
+  }
+  
+  .Pastor {
+    padding: 30px 15px;
+    flex-direction: column;
+  }
+  
+  .FirstPastor, .Text {
+    min-width: 100%;
+  }
+  
+  .FirstPastor img {
+    max-height: 300px;
+  }
+  
+  .Footer {
+    padding: 30px 15px;
+    flex-direction: column;
+  }
+  
+  .TextF, .Image {
+    min-width: 100%;
+  }
+  
+  .Image img {
+    height: 250px;
+  }
+  
+  /* Ministries page tablet */
+  .FirstProgram, .SecondProgram {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  
+  .KidProgram {
+    min-width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  
+  .Contact {
+    padding: 40px 15px;
+    margin: 30px 15px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .Head {
+    padding: 10px;
+  }
+  
+  .Title h1 {
+    font-size: 1.4rem;
+  }
+  
+  .link ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .link li {
+    width: 100%;
+  }
+  
+  .link li a {
+    display: block;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  
+  .BlockOne {
+    height: 250px;
+    padding: 20px 10px;
+  }
+  
+  .BlockOne h1 {
+    font-size: 1.5rem;
+  }
+  
+  .BlockOne p {
+    font-size: 0.9rem;
+  }
+  
+  .Context h2,
+  .Mission h2,
+  .Text h2,
+  .TextF h2 {
+    font-size: 1.4rem;
+  }
+  
+  .Context p,
+  .Mission p,
+  .Text p,
+  .TextF p {
+    font-size: 0.95rem;
+  }
+  
+  .images img {
+    height: 180px;
+  }
+  
+  .FirstPastor img {
+    max-height: 250px;
+  }
+  
+  .Image img {
+    height: 200px;
+  }
+  
+  /* Ministries page mobile */
+  .FirstProgram, .SecondProgram {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+  
+  .KidProgram {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .KidProgram h2 {
+    font-size: 1.3rem;
+  }
+  
+  .KidProgram img {
+    height: 200px;
+  }
+  
+  .KidProgram p {
+    font-size: 0.95rem;
+  }
+  
+  .Contact {
+    padding: 30px 15px;
+    font-size: 1.1rem;
+    margin: 20px 10px;
+  }
+}
+
+/* Small mobile (360px and below) */
+@media (max-width: 360px) {
+  .Title h1 {
+    font-size: 1.2rem;
+  }
+  
+  .BlockOne {
+    height: 220px;
+  }
+  
+  .BlockOne h1 {
+    font-size: 1.3rem;
+  }
+  
+  .images img {
+    height: 150px;
+  }
+  
+  .KidProgram {
+    padding: 15px;
+  }
+  
+  .KidProgram img {
+    height: 180px;
+  }
+}
+
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .Context,
+  .Mission,
+  .Pictures,
+  .Pastor,
+  .Footer,
+  .FirstProgram,
+  .SecondProgram {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .KidProgram {
+    max-width: 380px;
+  }
+}
+
+/* Extra large screens (1400px and above) */
+@media (min-width: 1400px) {
+  .Context,
+  .Mission,
+  .Pictures,
+  .Pastor,
+  .Footer,
+  .FirstProgram,
+  .SecondProgram {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  .images img {
+    height: 300px;
+  }
+}
+
+/* Hover effects for non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .KidProgram:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+  
+  .link li a:hover {
+    background-color: rgba(74, 108, 247, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+/* Mobile menu toggle for better mobile experience */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  
+  .link {
+    display: none;
+  }
+  
+  .link.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .Head, .BlockOne {
+    display: none;
+  }
+  
+  .Main {
+    color: #000;
+    background: #fff;
+  }
+  
+  .KidProgram {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}

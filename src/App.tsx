@@ -6,6 +6,13 @@ import ChurchOne from './assets/ChurchOne.jpg'
 import ChurchTwo from './assets/ChurchTwo.jpg'
 import ChurchThree from './assets/ChurchThree.jpg'
 import Location from './assets/Location.png'
+import Children from './assets/Children.jpg'
+import Women from './assets/Women.jpg'
+import Intercession from './assets/Intercession.jpg'
+import Sunday from './assets/Sunday.jpg'
+import Youth from './assets/Youth.jpg'
+import Cell from './assets/Cell.jpg'
+
 function App() {
   return (
     <Router>
@@ -19,7 +26,7 @@ function App() {
             <li><Link to="/">About Us</Link></li>
             <li><Link to="/event">Event</Link></li>
             <li><Link to="/ministries">Our Ministries</Link></li>
-            <li><Link to="/location">Location</Link></li>
+            <li><Link to="/location">Contact</Link></li>
           </div>
         </div>
         <Routes>
@@ -134,27 +141,214 @@ foundation of our faith and teaching.
             </div>
           } />
           <Route path="/event" element={
+            <div>
             <div className="BlockOne" style={{ background: `url(${ChurchImage}) no-repeat center center/cover` }}>
                 <h1>Give your Life to Jesus</h1>
                 <p>"Delight thyself also in the LORD; and he shall give thee the desires of thine heart."</p>
                 <p>— Psalm 37:4 (KJV)</p></div>
+                <div className="Footer">
+                <div className="TextF">
+                  <h2>Effective Life Church</h2>
+                  <p>Le Centre Evangélique Francophone
+                     Arche de l’Alliance Goma est une 
+                     Extension du C.E. Arche de l’Alliance 
+                     Kinshasa/ Masina. Elle a pris 
+                     naissance à Goma le 04/07/1999 dans 
+                     le but de répondre à l’appel 
+                     missionnaire de Jésus Christ de 
+                     faire de toutes les nations ses disciples. (Matt 28,19-20).</p>
+                </div>
+                <div className="Image">
+                  <img src={Location} alt="" />
+                </div>
+              </div>
+            </div>
           } />
           <Route path="/ministries" element={<div>
             <div className="BlockOne" style={{ background: `url(${ChurchImage}) no-repeat center center/cover` }}>
                 <h1>Give your Life to Jesus</h1>
                 <p>"Delight thyself also in the LORD; and he shall give thee the desires of thine heart."</p>
                 <p>— Psalm 37:4 (KJV)</p></div>
-                <div className="KidProgram">
-                  <div className="Text"></div>
-                  <div className="KidPicure"></div>
+                <div className="FirstProgram">
+                  <div className="KidProgram">
+                  <h2>Kid's Ministry'</h2>
+                    <hr />
+                    <img src={Children} alt="" />
+                    <p>Our Sunday Kids Ministry
+                       is a joyful and safe 
+                       space where children 
+                       learn about God in a 
+                       fun and engaging way. 
+                       Through age-appropriate 
+                       Bible lessons, songs, 
+                       games, and activities, 
+                       children are taught God’s 
+                       love and values while 
+                       building friendships. 
+                       Our caring teachers are
+                        dedicated to nurturing
+                         each child’s spiritual
+                          growth and helping 
+                          them develop a strong 
+                          foundation of faith 
+                          as they grow.<br />
+                          <br />
+                          Every Sunday:   
+                          <em>From 10:30 AM to 12:30 PM</em></p>
+                  </div>
+                  <div className="KidProgram">
+                    <h2>Youth's Ministry</h2>
+                    <hr />
+                    <img src={Youth} alt="" />
+                    <p>Our Saturday Youth Ministry
+                       is a vibrant and supportive 
+                       space where young people come 
+                       together to grow in faith, 
+                       build strong relationships, 
+                       and discover their purpose. 
+                       Through engaging Bible discussions,
+                        worship, mentorship, and interactive
+                         activities, the youth are encouraged
+                          to live out their faith, develop
+                           leadership skills, and positively 
+                           impact their community. <br />
+                           <br />
+                           <em>Every Saturday from 04:00 PM to 06:00 PM</em></p>
+                  </div>
+                  <div className="KidProgram">
+                    <h2>Women's Ministry</h2>
+                    <hr />
+                    <img src={Women} alt="" />
+                    <p>Our Thursday Women’s 
+                      Ministry is a welcoming 
+                      fellowship where women 
+                      come together to grow 
+                      spiritually, support one 
+                      another, and strengthen 
+                      their faith. Through prayer,
+                       Bible study, encouragement,
+                        and shared experiences, 
+                        women are empowered to 
+                        live purposefully, serve
+                         their families and 
+                         communities, and walk 
+                         confidently in God’s calling. <br />
+                         <br />
+                         <em>Every Thursday from 10:00 AM to 12:00 PM</em>
+                         </p>
+                  </div>
                 </div>
+                <div className="SecondProgram">
+                  <div className="KidProgram">
+                    <h2>Intercession Ministry</h2>
+                    <hr />
+                    <img src={Intercession} alt="" />
+                    <p>Our Tuesday Intercession 
+                      Ministry is dedicated to 
+                      prayer and spiritual support.
+                       During this time, believers 
+                       come together to stand in 
+                       prayer for the church, the
+                        community, and the needs of
+                         individuals. Through united
+                          and faithful intercession, 
+                          we seek God’s guidance, 
+                          healing, and strength, 
+                          trusting in His power to work
+                           in every situation. <br />
+                           <br />
+                           <em>Every Tuesday from 12:00 PM to 02:00 PM</em>
+                           </p>
+                  </div>
+                  <div className="KidProgram">
+                    <h2>Cell's Prayer</h2>
+                    <img src={Cell} alt="" />
+                    <p>The Cell Ministry is 
+                      a small-group ministry 
+                      that brings believers 
+                      together in homes or 
+                      designated places for 
+                      fellowship, prayer, Bible
+                       study, and mutual edification.
+                        It serves as a foundational 
+                        structure of the church, 
+                        promoting spiritual growth, 
+                        unity, and active participation 
+                        of every member in the life 
+                        and mission of the church. <br />
+                        <br />
+                        <br />
+                        <em>Every Friday from 05:00 PM to 06:00 PM</em></p>
+                  </div>
+                  <div className="KidProgram">
+                    <h2>Sunday Ministry</h2>
+                    <img src={Sunday} alt="" />
+                    <p>Our Sunday Adults Ministry 
+                      provides a meaningful space 
+                      for adults to grow in faith,
+                       deepen their understanding 
+                       of God’s Word, and build 
+                       strong relationships. 
+                       Through Bible teaching, 
+                       prayer, and fellowship,
+                        adults are encouraged to 
+                        apply biblical principles 
+                        to daily life, strengthen 
+                        their spiritual walk, and 
+                        serve both the church and 
+                        the community with purpose. <br />
+                        <em>English Services from 09:00 AM to 10:30 AM</em>
+                        <em>French Service from 10:30 AM to 12:30 PM</em></p>
+                  </div>
+                </div>
+                <div className="Footer">
+                <div className="TextF">
+                  <h2>Effective Life Church</h2>
+                  <p>Le Centre Evangélique Francophone
+                     Arche de l’Alliance Goma est une 
+                     Extension du C.E. Arche de l’Alliance 
+                     Kinshasa/ Masina. Elle a pris 
+                     naissance à Goma le 04/07/1999 dans 
+                     le but de répondre à l’appel 
+                     missionnaire de Jésus Christ de 
+                     faire de toutes les nations ses disciples. (Matt 28,19-20).</p>
+                </div>
+                <div className="Image">
+                  <img src={Location} alt="" />
+                </div>
+              </div>
                 </div>
               } />
           <Route path="/location" element={
+            <div>
             <div className="BlockOne" style={{ background: `url(${ChurchImage}) no-repeat center center/cover` }}>
                 <h1>Give your Life to Jesus</h1>
                 <p>"Delight thyself also in the LORD; and he shall give thee the desires of thine heart."</p>
                 <p>— Psalm 37:4 (KJV)</p></div>
+                <div className="Contact">
+                  Pour plus d’information, 
+                  ou si vous voulez entrer 
+                  en contact avec un Pasteur, <br />
+                   ou pour un besoin de la Prière,
+                    veuillez nous écrire sur : +256 750 989 518
+                </div>
+                <div className="Footer">
+                <div className="TextF">
+                  <h2>Effective Life Church</h2>
+                  <p>Le Centre Evangélique Francophone
+                     Arche de l’Alliance Goma est une 
+                     Extension du C.E. Arche de l’Alliance 
+                     Kinshasa/ Masina. Elle a pris 
+                     naissance à Goma le 04/07/1999 dans 
+                     le but de répondre à l’appel 
+                     missionnaire de Jésus Christ de 
+                     faire de toutes les nations ses disciples. (Matt 28,19-20).</p>
+                </div>
+                <div className="Image">
+                  <img src={Location} alt="" />
+                </div>
+              </div>
+                </div>
               } />
         </Routes>
       </div>
