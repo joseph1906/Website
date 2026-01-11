@@ -12,8 +12,12 @@ import Intercession from './assets/Intercession.jpg'
 import Sunday from './assets/Sunday.jpg'
 import Youth from './assets/Youth.jpg'
 import Cell from './assets/Cell.jpg'
+import { useState, type FormEvent } from 'react'
 
 function App() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <Router>
       <div className="Main">
@@ -35,7 +39,7 @@ function App() {
               <div className="BlockOne" style={{ background: `url(${ChurchImage}) no-repeat center center/cover` }}>
                 <h1>Give your Life to Jesus</h1>
                 <p>"Delight thyself also in the LORD; and he shall give thee the desires of thine heart."</p>
-                <p>— Psalm 37:4 (KJV)</p>
+                <p>— Psalm 37:4 <Link to="/Login" style={{textDecoration:'none', color:'#fff'}}>(KJV)</Link> </p>
               </div>
               <div className="Context">
                   <h2>About Us</h2>
@@ -58,7 +62,6 @@ foundation of our faith and teaching.
  We believe that the Church is the body 
  of Christ, called to share the Gospel, 
  care for one another, and bring hope to the world.</p>
- 
                 </div>
                 <div className="Mission">
                   <div className="Firstmission">
@@ -350,6 +353,38 @@ foundation of our faith and teaching.
               </div>
                 </div>
               } />
+              <Route path='/Login' element={
+                <div>
+                <div className="BlockOne" style={{ background: `url(${ChurchImage}) no-repeat center center/cover` }}>
+                <h1>Give your Life to Jesus</h1>
+                <p>"Delight thyself also in the LORD; and he shall give thee the desires of thine heart."</p>
+                <p>— Psalm 37:4 (KJV)</p></div>
+                <div className="Formulaire">
+                <form action="">
+                  <h2>Login Form</h2>
+                  <input type="text" placeholder='Username'/>
+                  <input type="password" placeholder='Password'/>
+                  <button >Submit</button>
+                </form>
+                </div>
+                <div className="Footer">
+                <div className="TextF">
+                  <h2>Effective Life Church</h2>
+                  <p>Le Centre Evangélique Francophone
+                     Arche de l’Alliance Goma est une 
+                     Extension du C.E. Arche de l’Alliance 
+                     Kinshasa/ Masina. Elle a pris 
+                     naissance à Goma le 04/07/1999 dans 
+                     le but de répondre à l’appel 
+                     missionnaire de Jésus Christ de 
+                     faire de toutes les nations ses disciples. (Matt 28,19-20).</p>
+                </div>
+                <div className="Image">
+                  <img src={Location} alt="" />
+                </div>
+              </div>
+            </div>
+              }></Route>
         </Routes>
       </div>
     </Router>
