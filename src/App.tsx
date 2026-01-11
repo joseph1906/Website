@@ -12,12 +12,12 @@ import Intercession from './assets/Intercession.jpg'
 import Sunday from './assets/Sunday.jpg'
 import Youth from './assets/Youth.jpg'
 import Cell from './assets/Cell.jpg'
-import { useState, type FormEvent } from 'react'
+import { useState } from 'react'
 
 function App() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
 
+  const [Username, setUsername] = useState('')
+  const [Password, setPassword] = useState('')
   return (
     <Router>
       <div className="Main">
